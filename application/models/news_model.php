@@ -58,6 +58,7 @@ class News_Model extends CI_Model {
 	public function save()
 	{
 		$this->data->title = $this->input->post('title');
+		$this->data->slug = $this->verify_slug();
 		$this->data->subtitle = $this->input->post('subtitle');
 		$this->data->content = $this->input->post('content');
 		$this->data->category_id = $this->input->post('category_id');
@@ -142,6 +143,31 @@ class News_Model extends CI_Model {
 		$query = $this->db->get('news');
 
 		return $query->row();
+	}
+
+	public function verify_slug()
+	{
+		$slug = generate_slug($this->input->post('title'));
+
+		$rows = $this->db->where('slug', $slug)
+						 ->or_where('slug LIKE', $slug . '-_')
+						 ->get('news')
+						 ->result();
+						 
+		if (count($rows) === 0)
+		{
+			return $slug;
+		}
+		else
+		{
+			$slug = array_pop($rows)->slug;
+			$slug = explode('-', $slug);
+			$index = intval(array_pop($slug)) + 1;
+			$slug[] = strval($index);
+			$slug = implode('-', $slug);
+			return $slug;
+		}
+
 	}
 
 }

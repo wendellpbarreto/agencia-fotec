@@ -17,11 +17,15 @@ class Migration_Create_News_Table extends CI_Migration {
 			),
 			'title' => array(
 				'type' => 'VARCHAR',
-				'constraint' => 100
+				'constraint' => 200
+			),
+			'slug' => array(
+				'type' => 'VARCHAR',
+				'constraint' => 200
 			),
 			'subtitle' => array(
 				'type' => 'VARCHAR',
-				'constraint' => 200
+				'constraint' => 300
 			),
 			'content' => array(
 				'type' => 'TEXT'
