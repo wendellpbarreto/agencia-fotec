@@ -1,0 +1,45 @@
+#localization {
+	border-top: 5px solid #458cb8;
+
+	.container {
+		position: relative;
+	}
+
+	h1 {
+		background: #0c5989;
+		border-radius: 30px;
+		color: #FFF;
+		display: inline-block;
+		font: bold 14px 'Telex';
+		margin: 0;
+		padding: 20px 16px;
+		position: absolute;
+		text-transform: uppercase;
+		top: -28px;
+		z-index: 9999;
+	}
+
+	#map-container {
+		background: #F0F0F0;
+		height: 300px;
+	}
+
+	#map-canvas {
+		height: 0;
+		overflow: hidden;
+		padding-bottom: 270px;
+		padding-top: 30px;
+		position: relative;
+
+		iframe {
+		z-index: 999;
+			height: 300px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+
+		}
+	}
+
+}

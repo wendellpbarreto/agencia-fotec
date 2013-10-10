@@ -1,0 +1,55 @@
+$blue: #0c5989;
+
+#main-header {
+	margin-bottom: 10px;
+
+	.brand {
+		background: url('../img/logo-3b.jpg');
+		height: 103px;
+		text-indent: -9999px;
+		width: 107px;
+	}
+
+	a {
+		color: $blue;
+		font: bold 13px 'Telex';
+		text-transform: uppercase;
+		@include transition(all .3s);
+	}
+
+	.main-nav {
+		margin-top: 20px;
+
+		ul {
+			border-bottom: 1px solid #E7E7E7;
+			padding: 10px 0;
+			text-align: center;
+		}
+
+		li {
+			display: inline-block;
+		}
+
+		a:hover {
+			background: $blue;
+			border-radius: 30px;
+			color: white;
+		}
+	}
+
+	.sub-menu {
+		margin-right: 97px;
+		margin-top: 10px;
+
+		a:before {
+			color: #70d747;
+			content: '■';
+			margin-right: 15px;
+		}
+
+		a:hover {
+			background: none;
+			color: lighten($blue, 20%);
+		}
+	}
+}

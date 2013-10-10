@@ -1,0 +1,25 @@
+.btn-read-more {
+	border: 1px solid #B3B3B3;
+	border-radius: 0;
+	color: #838383;
+	float: right;
+	padding: 0 0 0 10px;
+	text-transform: uppercase;
+	@include transition(all .3s);
+
+	span {
+		border-right: 1px solid #B3B3B3;
+		display: inline-block;
+		font: bold 12px/30px 'Telex';
+		height: 30px;
+		padding-right: 10px;
+	}
+
+	img {
+		padding: 0 7px 0 4px;
+	}
+}
+
+.btn-read-more:hover {
+	color: #333;
+}

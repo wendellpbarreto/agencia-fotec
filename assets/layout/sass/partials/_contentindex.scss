@@ -1,0 +1,50 @@
+#content-index {
+	margin-bottom: 60px;
+
+	header {
+		background: url('../img/helper/line-divisor.gif') repeat-x;
+
+		h1 {
+			color: $blue;
+			font: bold 14px/21px 'Telex';
+			text-transform: uppercase;
+		}
+
+		span {
+			background: #FFF;
+			padding-right: 10px;
+		}
+	}
+
+	.news-calendar {
+		background: #3b72b3;
+		border-bottom: 5px solid #326299;
+		color: #FFF;
+		padding: 4px 0;
+		text-align: center;
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		.day {
+			font: bold 23px 'Telex';
+		}
+
+		.month {
+			font: bold 9px 'Telex';
+			text-transform: uppercase;
+		}
+	}
+
+	.col-lg-9.col-sm-9.col-12 {
+
+		p {
+			color: #0c5989;
+			font: bold 11px 'Telex';
+			margin-top: 10px;
+			text-transform: uppercase;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+#slideshow {
+	background-color: #e6edf2;
+	background-image: url('../img/helper/blank-height-40.gif');
+	background-repeat: repeat-x;
+	margin: 0;
+	padding: 0;
+	position: relative;
+
+	.slide-holder {
+		position: relative;
+		z-index: 9999;
+	}
+
+	.blue-row-divisor {
+		background: $blue;
+		height: 20px;
+		margin-top: -20px;
+	}
+}
