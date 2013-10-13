@@ -60,6 +60,7 @@ class News extends Base_Controller {
 	 */
 	public function delete($id)
 	{
+		parent::restrict(1);
 		get()  ? $this->_getDelete() : '';
 		post() ? $this->_postDelete($id) : '';
 	}
@@ -71,6 +72,7 @@ class News extends Base_Controller {
 	 */
 	public function activate($id)
 	{
+		parent::restrict(1);
 		get()  ? $this->_getActivate() : '';
 		post() ? $this->_postActivate($id) : '';
 	}
@@ -82,6 +84,7 @@ class News extends Base_Controller {
 	 */
 	public function hard_delete($id)
 	{
+		parent::restrict(1);
 		get()  ? $this->_getHardDelete() : '';
 		post() ? $this->_postHardDelete($id) : '';
 	}

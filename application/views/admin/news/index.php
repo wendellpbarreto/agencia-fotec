@@ -55,7 +55,9 @@
 								<th>Título</th>
 								<th>Editorial</th>
 								<th>Última Atualização</th>
-								<th class="span2">Ações</th>
+								<?php if (user_is('revisor')) : ?>
+									<th class="span2">Ações</th>
+								<?php endif; ?>
 							</tr>
 						</thead>
 						<tbody>
@@ -64,10 +66,12 @@
 								<td><?= $item->title ?></td>
 								<td><?= $item->category ?></td>
 								<td class="humanize" title="<?= $item->updated_at ?>"></td>
+								<?php if (user_is('revisor')) : ?>
 								<td>
 									<?= ((user_is('revisor'))?anchor('admin/news/edit/'. $item->id, '<i class="icon-pencil"></i>', attr('class:btn btn-small')):'') ?>
 									<?= anchor('admin/news/delete/'. $item->id, '<i class="icon-trash"></i>', attr('class:btn btn-small async','data-identity:'.$item->id)) ?>
 								</td>
+								<?php endif; ?>
 							</tr>
 							<?php endforeach; ?>
 						</tbody>
@@ -94,7 +98,9 @@
 								<th>Nome</th>
 								<th>Editorial</th>
 								<th>Data de Criação</th>
-								<th class="span2">Ações</th>
+								<?php if (user_is('revisor')) : ?>
+									<th class="span2">Ações</th>
+								<?php endif; ?>
 							</tr>
 						</thead>
 						<tbody>
@@ -103,10 +109,12 @@
 								<td><?= $item->title ?></td>
 								<td><?= $item->category ?></td>
 								<td class="humanize" title="<?= $item->created_at ?>"></td>
+								<?php if (user_is('revisor')) : ?>
 								<td>
-									<?= ((user_is('revisor'))?anchor('admin/news/edit/'. $item->id, '<i class="icon-pencil"></i>', attr('class:btn btn-small')):'') ?>
+									<?= anchor('admin/news/edit/'. $item->id, '<i class="icon-pencil"></i>', attr('class:btn btn-small')) ?>
 									<?= anchor('admin/news/delete/'. $item->id, '<i class="icon-trash"></i>', attr('class:btn btn-small async','data-identity:'.$item->id)) ?>
 								</td>
+								<?php endif; ?>
 							</tr>
 							<?php endforeach; ?>
 						</tbody>
@@ -133,7 +141,9 @@
 								<th>Nome</th>
 								<th>Editorial</th>
 								<th>Data de Exclusão</th>
-								<th class="span2">Ações</th>
+								<?php if (user_is('revisor')) : ?>
+									<th class="span2">Ações</th>
+								<?php endif; ?>
 							</tr>
 						</thead>
 						<tbody>
@@ -142,10 +152,12 @@
 								<td><?= $item->title ?></td>
 								<td><?= $item->category ?></td>
 								<td class="humanize" title="<?= $item->deleted_at ?>"></td>
+								<?php if (user_is('revisor')) : ?>
 								<td>
 									<?= anchor('admin/news/activate/'. $item->id, '<i class="icon-check"></i>', attr('class:btn btn-small async','data-identity:'.$item->id)) ?>
 									<?= anchor('admin/news/hard_delete/'. $item->id, '<i class="icon-remove"></i>', attr('class:btn btn-small async','data-identity:'.$item->id)) ?>
 								</td>
+								<?php endif; ?>
 							</tr>
 							<?php endforeach; ?>
 						</tbody>
