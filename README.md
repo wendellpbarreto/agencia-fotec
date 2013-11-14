@@ -1,4 +1,4 @@
-[![Stories in Ready](https://badge.waffle.io/wendellpbarreto/agencia-fotec.png?label=ready)]
+![Stories in Ready](https://badge.waffle.io/wendellpbarreto/agencia-fotec.png?label=ready)
 
 agencia-fotec
 =============
